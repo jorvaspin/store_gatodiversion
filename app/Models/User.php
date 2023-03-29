@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function carroCompras()
+    {
+        return $this->hasOne(CarroCompras::class, 'id_usuario');
+    }
 }
