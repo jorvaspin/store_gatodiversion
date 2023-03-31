@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Burbank Big';
+    src: url('/fonts/BurbankBigRegular-Bold.woff2') format('woff2'),
+        url('/fonts/BurbankBigRegular-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+// Body
+$body-bg: #f8fafc;
+
+//HTML RESET
+$html-font-size: 62.5%;
+
+// Typography
+$font-family-sans-serif: proxima-nova,'Libre Franklin', Arial, Helvetica, sans-serif;
+$font-family-headings: 'Burbank Big', Arial, Helvetica, sans-serif;
+$font-size-base: 1.3rem;
+$line-height-base: 1.3;
+
+// Colors
+$blue: #4B61E6;
+$indigo: #30336B;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #EB4D4B;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #6AB04C;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;

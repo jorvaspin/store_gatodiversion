@@ -8,7 +8,7 @@
         <a href="#no"><img src="https://res.cloudinary.com/dr3zgzxx0/image/upload/v1626108889/logo-big_ltxo2a.png" alt=""></a>
         <a href="#no"><img src="https://cdn.rojabet.com/images/rojabetlogo.svg" alt=""></a>
       </div>
-      <div id="footer-copyrights" class="_footer-copyrights-2 dropup">
+      <div class="_footer-copyrights-2 dropup">
         <div class="container">
           <div class="row">
             <div class="col-12 copyright-txt">

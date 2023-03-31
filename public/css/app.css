@@ -1,1 +1,7 @@
-
+@import url(https://use.typekit.net/zzi8vpi.css);
+@font-face {
+  font-family: "Burbank Big";
+  src: url("/fonts/BurbankBigRegular-Bold.woff2") format("woff2"), url("/fonts/BurbankBigRegular-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}

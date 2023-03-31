@@ -1,9 +1,7 @@
-import LoginPage from '@views/globals/LoginCmPage.vue';
-import DashboardPage from '@/views/mobile/pages/PageDashboard.vue';
+import LoginPage from '../components/home/loginPage.vue';
+import DashboardPage from '../components/home/dashboardPage.vue';
 
-import NotFoundPage from '../pages/404.vue';
-
-import store from '@/store/store';
+import NotFoundPage from '../components/error/404.vue';
 
 function checkAuth({ to, from, resolve, reject }) {
   const router = this;
@@ -23,19 +21,16 @@ const routes = [{
   path: '/login/',
   name: 'login',
   component: LoginPage,
-  viewName: 'main',
-  options: {
-    transition: 'f7-dive',
-  },
+  viewName: 'main'
 },
 {
   path: '/dashboard/',
   name: "cm.dashboard",
-  component: DashboardPage,
+  component: DashboardPage
 },
 {
   path: '(.*)',
-  component: NotFoundPage,
+  component: NotFoundPage
 },
 {
   scrollBehavior() {

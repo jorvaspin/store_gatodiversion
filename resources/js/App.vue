@@ -1,47 +1,39 @@
 <template>
     <div>
-      <top-menu />
-      <navbar-menu />
-      <navbar-mobile />
-      <transition>
-        <router-view>
-        </router-view>
-      </transition>
-      <footer-menu />
+      <top />
+      <footer-section />
     </div>
   </template>
-  <script lang="ts">
-  import { defineAsyncComponent, defineComponent } from "vue";
-  import { mapGetters } from "vuex";
-  import { store } from "@/store/store";
-  export default defineComponent({
-    name: "app",
-    components: {
-      TopMenu: defineAsyncComponent(() => import("@components/partials/top.vue")),
-    },
+<script lang="ts">
+import { computed, defineAsyncComponent, defineComponent } from "vue";
+export default defineComponent({
+  name: "dashboard",
     setup() {
-      const handleRefreshPage = async (done: () => void) => {
-        try {
+    return {
 
-        } catch (error) {
-          console.log(error);
-        }
-      };
-      return {
-        handleRefreshPage
-      };
-    },
-    data() {
-      return {
-        tabs: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      };
-    },
-    computed: {
+    };
+  },
 
+  data() {
+    return {
+      oponenteActivo: false,
+    };
+  },
+  components: {
+    top: defineAsyncComponent(() => import("../components/partials/top.vue")),
+    footerSection: defineAsyncComponent(() => import("../components/partials/footer.vue")),
+  },
+  methods: {
 
-      isLoadPage() {
-        return !store.state.statusLoadPageLibrary;
-      },
-    },
-  });
+  },
+  computed: {
+
+  },
+});
 </script>
+<style lang="less" scoped>
+.navbar-dashboard {
+  --f7-navbar-height: 60px !important;
+}
+</style>
+
