@@ -1,21 +1,24 @@
 require('./bootstrap');
 
-//init vue
-import Vue from 'vue';
-window.Vue = require('vue');
-Vue.config.productionTip = false;
+
+import { createApp } from 'vue'
+import App from './App.vue'
+//vue router
+import router from './routes';
+import store from './store'
+
+// vue tailwind
+import '../css/app.css';
 
 //Vuex
 window.Vuex = require('vuex');
 
-//vue router
-import Router from './routes.js';
+const app = createApp(App)
+app.use(router)
+app.mount('#app')
 
-//import app page
-import App from './App.vue';
-
-const app = new Vue({
-  // el: '#app',
-  router: Router,
-  render: h => h(App),
-}).$mount('#app');
+// const app = new Vue({
+//   // el: '#app',
+//   router: Router,
+//   render: h => h(App),
+// }).$mount('#app');
